@@ -38,7 +38,6 @@ I found the following results, sorted from least nesting to most nesting:
 language        | json library                                                | nesting level | file size     | notes                         |
 ----------------| ----------------------------------------------------------- | ------------- | ------------- | ----------------------------- |
 ruby            | [json](https://rubygems.org/gems/json/versions/1.8.3)       | 101           | 202 bytes     |
-rust            | [serde_json](https://docs.serde.rs/serde_json/)             | 128           | 256 bytes     |
 php             | `json_decode`                                               | 512           | 1024 bytes    | maximum depth is configurable |
 perl            | [JSON::PP](https://perldoc.perl.org/JSON/PP.html)           | 513           | 1026 bytes    |
 python3         | [json](https://docs.python.org/3/library/json.html)         | 994           | 2.0 KB        | without sys.setrecursionlimit
@@ -47,6 +46,7 @@ java - gson     | [Gson](https://github.com/google/gson)                      | 
 javascript      | `JSON.parse`                                                | 5713          | 11.4 KB       |
 java - jackson  | [Jackson](https://github.com/FasterXML/jackson-core)        | 6373          | 13   KB       |
 C++             | [nlohmann::json](https://github.com/nlohmann/json)          | 13787         | 27.6 KB       | segfault
+rust            | [serde_json](https://docs.serde.rs/serde_json/)             | 18057         | 36.1 KB       | limited to 128 by default
 Nim             | [json](https://nim-lang.org/docs/json.html)                 | 100000        | 200 KB        | w/ `-d:release`
 go              | `encoding/json`                                             | 2581101       | 5.0 MiB       | goroutine stack exceeds 1000000000-byte limit
 ruby            | [Oj](https://github.com/ohler55/oj)                         | ∞             | ∞             |
